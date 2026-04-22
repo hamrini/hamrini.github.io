@@ -1,0 +1,1 @@
+import{r as e}from"./vendor-BKS5GF3h.js";const t=()=>function(t){const[n,a]=e.useState(()=>"undefined"!=typeof window&&window.matchMedia(t).matches);return e.useEffect(()=>{const e=window.matchMedia(t),n=()=>a(e.matches);return n(),e.addEventListener("change",n),()=>e.removeEventListener("change",n)},[t]),n}("(max-width: 767px)");export{t as u};

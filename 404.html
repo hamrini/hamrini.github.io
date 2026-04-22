@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Korea Ham Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      /**
+       * GitHub Pages SPA fallback (spa-github-pages 기법).
+       *
+       * GH Pages 는 정적 파일만 서빙하므로 `/r/DS0KBU` 같은 딥링크는 기본적으로
+       * 404. 이 스크립트가 그 404 응답을 받아 원래 경로를 쿼리로 인코딩한 뒤
+       * basename 루트로 리다이렉트. index.html 의 디코더가 그 쿼리를 풀어
+       * history.replaceState 로 원래 URL 로 복원.
+       *
+       * 배포된 per-callsign 정적 페이지 (dist/r/DS0KBU/index.html) 는 GH Pages
+       * 가 직접 매치해 서빙하기 때문에 이 404 경로를 타지 않는다. 여기 들어오는
+       * 건 prerender 되지 않은 루트(예: /nearby, /boards/general, 수정 후 CSV 에서
+       * 제거된 콜사인 등).
+       */
+      var segments = 0; // custom domain root — path depth = 0
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segments).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(segments).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
