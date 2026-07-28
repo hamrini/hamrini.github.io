@@ -1,0 +1,1 @@
+var t=/가동중단|고\s*장|허가\s*실효/,n=/정상/,e=/확인요망|확인필요/;function o(o){return t.test(o)?"inactive":e.test(o)?"unknown":n.test(o)?"operational":"unknown"}export{o as t};

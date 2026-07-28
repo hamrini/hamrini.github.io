@@ -1,0 +1,1 @@
+var t=new Intl.RelativeTimeFormat("ko",{numeric:"auto",style:"narrow"});function e(e,a=new Date){const o=e.getTime()-a.getTime(),r=Math.abs(o)/1e3;return r<30?"방금":r<60?t.format(Math.round(o/1e3),"second"):r<3600?t.format(Math.round(o/6e4),"minute"):r<86400?t.format(Math.round(o/36e5),"hour"):t.format(Math.round(o/864e5),"day")}export{e as t};

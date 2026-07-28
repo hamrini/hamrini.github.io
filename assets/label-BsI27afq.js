@@ -1,0 +1,1 @@
+import{C as a,at as s}from"./radix-BDgEcp1S.js";import{r as e}from"./utils-CpjGZByn.js";var t=s();function r({className:s,...r}){return(0,t.jsx)(a,{"data-slot":"label",className:e("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",s),...r})}export{r as t};

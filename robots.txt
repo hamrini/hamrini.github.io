@@ -1,0 +1,27 @@
+# cqcq.kr — 한국 아마추어 무선 중계기 지도
+User-agent: *
+Allow: /
+
+Sitemap: https://cqcq.kr/sitemap.xml
+
+# AI 훈련 크롤러 차단
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
